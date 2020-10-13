@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trainer Kit</title>
+    <style media="screen">
+      body {
+        background-color: #E0EEEE;
+      }
+      h1 {
+        margin: 0% 35%;
+        padding-top: 5%;
+      }
+      input {
+        width: 47px;
+      }
+      h3 {
+        padding-left: 50px;
+      }
+      #and {
+        position: absolute;
+        top: 200px;
+        width: 325px;
+      }
+      #or {
+        position: absolute;
+        top: 200px;
+        left:330px;
+        width: 325px;
+      }
+      #nand {
+        position: absolute;
+        top: 200px;
+        left:625px;
+        width: 325px;
+      }
+      #nor {
+        position: absolute;
+        top: 200px;
+        left:900px;
+        width: 325px;
+      }
+      #xor {
+        position: absolute;
+        top: 200px;
+        left:1170px;
+        width: 325px;
+      }
+    </style>
+    <script type="text/javascript">
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var inp = document.forms['inputs']['all-inputs'];
+        function validation() {
+          if (inp.value<0) {
+            alert("Input should be either 0 or 1");
+            return false;
+          }
+          if (inp.value>1) {
+            alert("Input should be either 0 or 1");
+            return false;
+          }
+          return true;
+        }
+      })
+    </script>
+  </head>
+  <body>
+
+    <h1>Virtual Digital IC Trainer Kit</h1>
+
+    <div class="container">
+
+      <!-- AND Gate IC -->
+      <div class="row">
+        <div id="and" class="col-sm">
+          <h3>2-input quad AND gate IC</h3>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input1" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input2" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="and1()">Output</button>
+                      <p id="and_output1"></p>
+
+                      <script>
+                      function and1() {
+                        let a = document.querySelector('#and_input1').value;
+                        let b = document.querySelector('#and_input2').value;
+                        let c = a*b;
+                        document.getElementById("and_output1").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input3" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input4" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="and2()">Output</button>
+                      <p id="and_output2"></p>
+
+                      <script>
+                      function and2() {
+                        let a = document.querySelector('#and_input3').value;
+                        let b = document.querySelector('#and_input4').value;
+                        let c = a*b;
+                        document.getElementById("and_output2").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td><img src="and-ic.jpg" alt="AND IC" height="200px"></td>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input10" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input9" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="and3()">Output</button>
+                      <p id="and_output3"></p>
+
+                      <script>
+                      function and3() {
+                        let a = document.querySelector('#and_input10').value;
+                        let b = document.querySelector('#and_input9').value;
+                        let c = a*b;
+                        document.getElementById("and_output3").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input13" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="and_input12" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="and4()">Output</button>
+                      <p id="and_output4"></p>
+
+                      <script>
+                      function and4() {
+                        let a = document.querySelector('#and_input13').value;
+                        let b = document.querySelector('#and_input12').value;
+                        let c = a*b;
+                        document.getElementById("and_output4").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- OR Gate IC -->
+        <div id="or" class="col-sm">
+          <h3>2-input quad OR gate IC</h3>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input1" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input2" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="or1()">Output</button>
+                      <p id="or_output1"></p>
+
+                      <script>
+                      function or1() {
+                        let a = document.querySelector('#or_input1').value;
+                        let b = document.querySelector('#or_input2').value;
+                        let c = a | b;
+                        document.getElementById("or_output1").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input3" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input4" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="or2()">Output</button>
+                      <p id="or_output2"></p>
+
+                      <script>
+                      function or2() {
+                        let a = document.querySelector('#or_input3').value;
+                        let b = document.querySelector('#or_input4').value;
+                        let c = a | b;
+                        document.getElementById("or_output2").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td><img src="or-ic.jpg" alt="AND IC" height="230px"></td>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input10" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input9" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="or3()">Output</button>
+                      <p id="or_output3"></p>
+
+                      <script>
+                      function or3() {
+                        let a = document.querySelector('#or_input10').value;
+                        let b = document.querySelector('#or_input9').value;
+                        let c = a | b;
+                        document.getElementById("or_output3").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input13" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="or_input12" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="or4()">Output</button>
+                      <p id="or_output4"></p>
+
+                      <script>
+                      function or4() {
+                        let a = document.querySelector('#or_input13').value;
+                        let b = document.querySelector('#or_input12').value;
+                        let c = a | b;
+                        document.getElementById("or_output4").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- NAND Gate IC -->
+        <div id="nand" class="col-sm">
+          <h3>2-input quad NAND gate IC</h3>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input1" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input2" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nand1()">Output</button>
+                      <p id="nand_output1"></p>
+
+                      <script>
+                      function nand1() {
+                        let a = document.querySelector('#nand_input1').value;
+                        let b = document.querySelector('#nand_input2').value;
+                        let c = (a&b);
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nand_output1").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input3" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input4" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nand2()">Output</button>
+                      <p id="nand_output2"></p>
+
+                      <script>
+                      function nand2() {
+                        let a = document.querySelector('#nand_input3').value;
+                        let b = document.querySelector('#nand_input4').value;
+                        let c = (a&b);
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nand_output2").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td><img src="nand-ic.jpg" alt="AND IC" height="200px"></td>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input10" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input9" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nand3()">Output</button>
+                      <p id="nand_output3"></p>
+
+                      <script>
+                      function nand3() {
+                        let a = document.querySelector('#nand_input10').value;
+                        let b = document.querySelector('#nand_input9').value;
+                        let c = (a&b);
+                        if (c==0) {
+                           c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nand_output3").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input13" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nand_input12" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nand4()">Output</button>
+                      <p id="nand_output4"></p>
+
+                      <script>
+                      function nand4() {
+                        let a = document.querySelector('#nand_input13').value;
+                        let b = document.querySelector('#nand_input12').value;
+                        let c = (a&b);
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nand_output4").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- NOR Gate IC -->
+        <div id="nor" class="col-sm">
+          <h3>2-input quad NOR gate IC</h3>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input1" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input2" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nor1()">Output</button>
+                      <p id="nor_output1"></p>
+
+                      <script>
+                      function nor1() {
+                        let a = document.querySelector('#nor_input1').value;
+                        let b = document.querySelector('#nor_input2').value;
+                        let c = a | b;
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nor_output1").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input3" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input4" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nor2()">Output</button>
+                      <p id="nor_output2"></p>
+
+                      <script>
+                      function nor2() {
+                        let a = document.querySelector('#nor_input3').value;
+                        let b = document.querySelector('#nor_input4').value;
+                        let c = a | b;
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nor_output2").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td><img src="nor-ic.jpg" alt="AND IC" height="230px"></td>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input10" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input9" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nor3()">Output</button>
+                      <p id="nor_output3"></p>
+
+                      <script>
+                      function nor3() {
+                        let a = document.querySelector('#nor_input10').value;
+                        let b = document.querySelector('#nor_input9').value;
+                        let c = a | b;
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nor_output3").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input13" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="nor_input12" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="nor4()">Output</button>
+                      <p id="nor_output4"></p>
+
+                      <script>
+                      function nor4() {
+                        let a = document.querySelector('#nor_input13').value;
+                        let b = document.querySelector('#nor_input12').value;
+                        let c = a | b;
+                        if (c==0) {
+                          c=1;
+                        }
+                        else {
+                          c=0;
+                        }
+                        document.getElementById("nor_output4").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- XOR Gate IC -->
+        <div id="xor" class="col-sm">
+          <h3>2-input quad XOR gate IC</h3>
+          <table>
+            <tr>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input1" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input2" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="xor1()">Output</button>
+                      <p id="xor_output1"></p>
+
+                      <script>
+                      function xor1() {
+                        let a = document.querySelector('#xor_input1').value;
+                        let b = document.querySelector('#xor_input2').value;
+                        let c = (a^b);
+                        document.getElementById("xor_output1").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input3" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input4" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="xor2()">Output</button>
+                      <p id="xor_output2"></p>
+
+                      <script>
+                      function xor2() {
+                        let a = document.querySelector('#xor_input3').value;
+                        let b = document.querySelector('#xor_input4').value;
+                        let c = (a^b);
+                        document.getElementById("xor_output2").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td><img src="xor-ic.jpg" alt="AND IC" height="250px"></td>
+              <td>
+                <table>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr><td></td></tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input10" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="xor_input9" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="xor3()">Output</button>
+                      <p id="xor_output3"></p>
+
+                      <script>
+                      function xor3() {
+                        let a = document.querySelector('#xor_input10').value;
+                        let b = document.querySelector('#xor_input9').value;
+                        let c = (a^b);
+                        document.getElementById("xor_output3").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="input13" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <form action="" name="inputs" onsubmit="return validation()">
+                        <input id="input12" type="number" placeholder="input" name="all-inputs">
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button onclick="xor4()">Output</button>
+                      <p id="output4"></p>
+
+                      <script>
+                      function xor4() {
+                        let a = document.querySelector('#input13').value;
+                        let b = document.querySelector('#input12').value;
+                        let c = (a^b);
+                        document.getElementById("output4").innerHTML = c;
+                      }
+                      </script>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
