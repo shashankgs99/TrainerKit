@@ -16,7 +16,7 @@ function checkPower() {
 
     function and(input1, input2, out) {
       if (input1 & input2) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#008000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
@@ -25,7 +25,7 @@ function checkPower() {
 
     function or(input1, input2, out) {
       if (input1 | input2) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#008000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
@@ -34,7 +34,7 @@ function checkPower() {
 
     function nand(input1, input2, out) {
       if (!(input1 & input2)) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#008000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
@@ -43,7 +43,7 @@ function checkPower() {
 
     function nor(input1, input2, out) {
       if (!(input1 | input2)) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#008000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
@@ -52,7 +52,7 @@ function checkPower() {
 
     function xor(input1, input2, out) {
       if (input1 ^ input2) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#008000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
@@ -122,7 +122,7 @@ function checkPower() {
 
     var numButtons = document.querySelectorAll(".off").length;
     for (var i = 0; i < numButtons; i++) {
-      document.querySelectorAll(".off")[i].style.backgroundColor = "#FFF";
+      document.querySelectorAll(".off")[i].style.backgroundColor = "#efefef";
       console.log("Powered down");
     }
   }

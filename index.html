@@ -4,10 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Trainer Kit</title>
+  <link rel="icon" href="nitk.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
   <label class="switch">
     <input id="accept" type="checkbox">
     <span class="slider round"></span>
@@ -101,7 +103,7 @@
                   <td>
                     <label class="switch">
                       <input type="checkbox">
-                      <span id="vcc" class="slider round"></span>
+                      <span id="ground" class="slider round"></span>
                     </label>
                   </td>
                 </tr>
@@ -281,7 +283,7 @@
                   <td>
                     <label class="switch">
                       <input type="checkbox">
-                      <span id="vcc" class="slider round"></span>
+                      <span id="ground" class="slider round"></span>
                     </label>
                   </td>
                 </tr>
@@ -464,7 +466,7 @@
                   <td>
                     <label class="switch">
                       <input type="checkbox">
-                      <span id="vcc" class="slider round"></span>
+                      <span id="ground" class="slider round"></span>
                     </label>
                   </td>
                 </tr>
@@ -646,7 +648,7 @@
                   <td>
                     <label class="switch">
                       <input type="checkbox">
-                      <span id="vcc" class="slider round"></span>
+                      <span id="ground" class="slider round"></span>
                     </label>
                   </td>
                 </tr>
@@ -827,7 +829,7 @@
                   <td>
                     <label class="switch">
                       <input type="checkbox">
-                      <span id="vcc" class="slider round"></span>
+                      <span id="ground" class="slider round"></span>
                     </label>
                   </td>
                 </tr>
@@ -925,6 +927,26 @@
         </tr>
         </table>
       </div>
+    </div>
+  </div>
+  <div class="after">
+    <div class="inst">
+      <h2>Instructions</h2>
+      <ul>
+        <li>Set the inputs.</li>
+        <li>Connect the VCC and ground.</li>
+        <li>Turn on the power button to display output.</li>
+        <li>Restart the power after making any changes.</li>
+      </ul>
+    </div>
+    <div class="codes">
+      <h2>Color Codes</h2>
+      <ul>
+        <li>VCC is red toggle button. Ground is black toggle button.</li>
+        <li>Inputs are blue toggle button. </li>
+        <li>Red light indicates that output is bit '0'.</li>
+        <li>Green light indicates that output is bit '1'</li>
+      </ul>
     </div>
   </div>
   <script src="index.js" charset="utf-8"></script>
