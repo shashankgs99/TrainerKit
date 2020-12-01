@@ -6,7 +6,52 @@
   font-size: 8px;
   text-align: center;
 }
+h1 {
+  margin: 0% 35%;
+  padding-top: 5%;
+}
 
+input {
+  width: 47px;
+}
+
+h3 {
+  padding-left: 50px;
+}
+
+#and {
+  position: absolute;
+  top: 200px;
+  width: 325px;
+}
+
+#or {
+  position: absolute;
+  top: 200px;
+  left: 330px;
+  width: 325px;
+}
+
+#nand {
+  position: absolute;
+  top: 200px;
+  left: 625px;
+  width: 325px;
+}
+
+#nor {
+  position: absolute;
+  top: 200px;
+  left: 920px;
+  width: 325px;
+}
+
+#xor {
+  position: absolute;
+  top: 200px;
+  left: 1210px;
+  width: 325px;
+}
 img {
   width: 200px;
   height: 220px;
