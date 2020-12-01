@@ -1,1042 +1,981 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Trainer Kit</title>
-    <link rel="stylesheet" href="styles.css">
-    <style media="screen">
-    
-      h1 {
-        margin: 0% 35%;
-        padding-top: 5%;
-      }
-      input {
-        width: 47px;
-      }
-      h3 {
-        padding-left: 50px;
-      }
-      #and {
-        position: absolute;
-        top: 200px;
-        width: 325px;
-      }
-      #or {
-        position: absolute;
-        top: 200px;
-        left:330px;
-        width: 325px;
-      }
-      #nand {
-        position: absolute;
-        top: 200px;
-        left:625px;
-        width: 325px;
-      }
-      #nor {
-        position: absolute;
-        top: 200px;
-        left:920px;
-        width: 325px;
-      }
-      #xor {
-        position: absolute;
-        top: 200px;
-        left:1210px;
-        width: 325px;
-      }
-    </style>
-    <script type="text/javascript">
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var inp = document.forms['inputs']['all-inputs'];
-        function validation() {
-          if (inp.value<0) {
-            alert("Input should be either 0 or 1");
-            return false;
-          }
-          if (inp.value>1) {
-            alert("Input should be either 0 or 1");
-            return false;
-          }
-          return true;
-        }
-      })
-    </script>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Trainer Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <style media="screen">
+    h1 {
+      margin: 0% 35%;
+      padding-top: 5%;
+    }
 
-    <h1>Virtual Digital IC Trainer Kit</h1>
+    input {
+      width: 47px;
+    }
 
-    <div class="container">
+    h3 {
+      padding-left: 50px;
+    }
 
-      <!-- AND Gate IC -->
-      <div class="row">
-        <div id="and" class="col-sm">
-          <h3>2-input quad AND gate IC</h3>
-          <table>
-            <tr>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
+    #and {
+      position: absolute;
+      top: 200px;
+      width: 325px;
+    }
 
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
+    #or {
+      position: absolute;
+      top: 200px;
+      left: 330px;
+      width: 325px;
+    }
 
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                      <p id="and_output2"></p>
+    #nand {
+      position: absolute;
+      top: 200px;
+      left: 625px;
+      width: 325px;
+    }
 
-                      <script>
-                      function and2() {
-                        let a = document.querySelector('#and_input3').value;
-                        let b = document.querySelector('#and_input4').value;
-                        let c = a*b;
-                        document.getElementById("and_output2").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="74LS08-AND.jpg" alt="AND IC" height="250px"></td>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
+    #nor {
+      position: absolute;
+      top: 200px;
+      left: 920px;
+      width: 325px;
+    }
 
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output3"></p>
+    #xor {
+      position: absolute;
+      top: 200px;
+      left: 1210px;
+      width: 325px;
+    }
+  </style>
+</head>
 
-                      <script>
-                      function and3() {
-                        let a = document.querySelector('#and_input10').value;
-                        let b = document.querySelector('#and_input9').value;
-                        let c = a*b;
-                        document.getElementById("and_output3").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output4"></p>
+<body>
+  <label class="switch">
+    <input id="accept" type="checkbox">
+    <span class="slider round"></span>
+  </label>
 
-                      <script>
-                      function and4() {
-                        let a = document.querySelector('#and_input13').value;
-                        let b = document.querySelector('#and_input12').value;
-                        let c = a*b;
-                        document.getElementById("and_output4").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div>
+  <h1>Virtual Digital IC Trainer Kit</h1>
 
-        <!-- OR Gate IC -->
-        <div id="or" class="col-sm">
-          <h3>2-input quad OR gate IC</h3>
-          <table>
-            <tr>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
+  <div class="container">
 
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="74LS32-OR.jpg" alt="OR IC" height="350px"></td>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="or_output3"></p>
-
-                      <script>
-                      function or3() {
-                        let a = document.querySelector('#or_input10').value;
-                        let b = document.querySelector('#or_input9').value;
-                        let c = a | b;
-                        document.getElementById("or_output3").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="or_output4"></p>
-
-                      <script>
-                      function or4() {
-                        let a = document.querySelector('#or_input13').value;
-                        let b = document.querySelector('#or_input12').value;
-                        let c = a | b;
-                        document.getElementById("or_output4").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- NAND Gate IC -->
-        <div id="nand" class="col-sm">
-          <h3>2-input quad NAND gate IC</h3>
-          <table>
-            <tr>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="74LS00-NAND.jpg" alt="NAND IC" height="250px"></td>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- NOR Gate IC -->
-        <div id="nor" class="col-sm">
-          <h3>2-input quad NOR gate IC</h3>
-          <table>
-            <tr>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="74LS02-NOR.jpg" alt="NOR IC" height="250px"></td>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label><p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label><p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div>
-
-        <!-- XOR Gate IC -->
-        <div id="xor" class="col-sm">
-          <h3>2-input quad XOR gate IC</h3>
-          <table>
-            <tr>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="and_output1"></p>
-
-                      <script>
-                      function and1() {
-                        let a = document.querySelector('#and_input1').value;
-                        let b = document.querySelector('#and_input2').value;
-                        let c = a*b;
-                        document.getElementById("and_output1").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span id="vcc" class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td><img src="74LS86-XOR.jpg" alt="XOR IC" height="250px"></td>
-              <td>
-                <table>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
-                  <tr><td></td></tr>
+    <!-- AND Gate IC -->
+    <div class="row">
+      <div id="and" class="col-sm">
+        <h3>2-input quad AND gate IC</h3>
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and1" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and2" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off andOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and3" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and4" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off andout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
                   <td>
                     <label class="switch">
                       <input type="checkbox">
                       <span id="vcc" class="slider round"></span>
                     </label>
-                    <p id="and_output1"></p>
-
-                    <script>
-                    function and1() {
-                      let a = document.querySelector('#and_input1').value;
-                      let b = document.querySelector('#and_input2').value;
-                      let c = a*b;
-                      document.getElementById("and_output1").innerHTML = c;
-                    }
                   </td>
-                </script>
                 </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <button id="off" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="xor_output3"></p>
+              </table>
+            </td>
+            <td><img src="74LS08-AND.jpg" alt="AND IC" height="250px"></td>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
 
-                      <script>
-                      function xor3() {
-                        let a = document.querySelector('#xor_input10').value;
-                        let b = document.querySelector('#xor_input9').value;
-                        let c = (a^b);
-                        document.getElementById("xor_output3").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
-                    </td>
-                  </tr>
-                  <tr>
-                  <tr>
-                    <td>
-                      <button id="on" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                      <p id="output4"></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and8" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and7" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off andOut3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and6" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="and5" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off andOut4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-                      <script>
-                      function xor4() {
-                        let a = document.querySelector('#input13').value;
-                        let b = document.querySelector('#input12').value;
-                        let c = (a^b);
-                        document.getElementById("output4").innerHTML = c;
-                      }
-                      </script>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </div>
+      <!-- OR Gate IC -->
+      <div id="or" class="col-sm">
+        <h3>2-input quad OR gate IC</h3>
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or1" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or2" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off orOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or3" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or4" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off orOut2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td><img src="74LS32-OR.jpg" alt="OR IC" height="350px"></td>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or8" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or7" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off orOut3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or6" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="or5" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off orOut4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- NAND Gate IC -->
+      <div id="nand" class="col-sm">
+        <h3>2-input quad NAND gate IC</h3>
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand1" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand2" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off nandOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand3" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand4" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off nandOut2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td><img src="74LS00-NAND.jpg" alt="NAND IC" height="250px"></td>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand8" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand7" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off nandOut3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand6" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nand5" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off nandOut4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- NOR Gate IC -->
+      <div id="nor" class="col-sm">
+        <h3>2-input quad NOR gate IC</h3>
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off norOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor1" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor2" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off norOut2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor3" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor4" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td><img src="74LS02-NOR.jpg" alt="NOR IC" height="250px"></td>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off norOut3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor8" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor7" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off norOut4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor6" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="nor5" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- XOR Gate IC -->
+      <div id="xor" class="col-sm">
+        <h3>2-input quad XOR gate IC</h3>
+        <table>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="xor1" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="xor2" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="off xorOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="xor3" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input id="xor4" type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td><button class="off xorOut2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span id="vcc" class="slider round"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td><img src="74LS86-XOR.jpg" alt="XOR IC" height="250px"></td>
+            <td>
+              <table>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+                <td>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span id="vcc" class="slider round"></span>
+                  </label>
+                </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input id="xor8" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input id="xor7" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="off xorOut3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input id="xor6" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="switch">
+                <input id="xor5" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td>
+              <button class="off xorOut4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+            </td>
+          </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
       </div>
     </div>
-  </body>
+  </div>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
 </html>
