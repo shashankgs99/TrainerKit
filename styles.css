@@ -18,8 +18,38 @@
   font-size: 8px;
   text-align: center;
 }
+
+.red {
+  color: #FF0000;
+  font-weight: bold;
+  font-style: italic;
+}
+.black {
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+}
+.blue {
+  color: #2196F3;
+  font-style: oblique;
+  font-style: italic;
+}
+.green {
+  color: #7FFF00;
+  font-weight: bold;
+  font-style: italic;
+}
+
 h1 {
   margin: 0% 35%;
+}
+
+h2 , h4, ul {
+  margin: 10px;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 input {
