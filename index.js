@@ -14,47 +14,50 @@ function checkPower() {
       return input;
     }
 
+    andOutputs = [];
     function and(input1, input2, out) {
       if (input1 & input2) {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
+        andOutputs.push(1);
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
+        andOutputs.push(0);
       }
       return out;
     }
 
-    function or(input1, input2, out) {
-      if (input1 | input2) {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
-      } else {
-        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
-      }
-      return out;
-    }
-
+    var nandOutputs = [];
     function nand(input1, input2, out) {
       if (!(input1 & input2)) {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
+        nandOutputs.push(1);
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
+        nandOutputs.push(0);
       }
       return out;
     }
 
+    var norOutputs = [];
     function nor(input1, input2, out) {
       if (!(input1 | input2)) {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
+        norOutputs.push(1);
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
+        norOutputs.push(0);
       }
       return out;
     }
 
+    var xorOutputs = [];
     function xor(input1, input2, out) {
       if (input1 ^ input2) {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
+        xorOutputs.push(1);
       } else {
         document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
+        xorOutputs.push(0);
       }
       return out;
     }
@@ -64,13 +67,6 @@ function checkPower() {
       var andGate = "#and" + j;
       document.querySelector(andGate).addEventListener('change', checking);
       andInputs.push(checking(document.querySelector(andGate)));
-    }
-
-    var orInputs = [];
-    for (var j = 1; j < 9; j++) {
-      var orGate = "#or" + j;
-      document.querySelector(orGate).addEventListener('change', checking);
-      orInputs.push(checking(document.querySelector(orGate)));
     }
 
     var nandInputs = [];
@@ -94,10 +90,10 @@ function checkPower() {
       xorInputs.push(checking(document.querySelector(xorGate)));
     }
 
-    var main = ["And", "Or", "Nand", "Nor", "Xor"];
+    var main = ["And", "Nand", "Nor", "Xor"];
     var vccVal = [];
     var groundVal = [];
-    for (var k = 0; k < 5; k++) {
+    for (var k = 0; k < 4; k++) {
       var grounds = ".ground" + main[k];
       var vccs = ".vcc" + main[k];
       groundVal.push(checking(document.querySelector(grounds)));
@@ -115,16 +111,6 @@ function checkPower() {
       }
     }
 
-    if ((vccVal[1] == 1) && (groundVal[1] == 1)) {
-      or(orInputs[0], orInputs[1], 4);
-      or(orInputs[2], orInputs[3], 5);
-      or(orInputs[4], orInputs[5], 7);
-      or(orInputs[6], orInputs[7], 6);
-    } else {
-      if ((orInputs.every(item => item == 0)) == false) {
-        alert("Turn on both the vcc and ground for OR gate IC.")
-      }
-    }
     if ((vccVal[2] == 1) && (groundVal[2] == 1)) {
       nand(nandInputs[0], nandInputs[1], 8);
       nand(nandInputs[2], nandInputs[3], 9);
@@ -156,6 +142,10 @@ function checkPower() {
       }
     }
     setTimeout(function(){ alert("Power is turned on. Restart the power button after any changes."); }, 1000);
+    console.log(andOutputs);
+    console.log(nandOutputs);
+    console.log(norOutputs);
+    console.log(xorOutputs);
   } else {
     var numButtons = document.querySelectorAll(".off").length;
     for (var i = 0; i < numButtons; i++) {
