@@ -16,45 +16,45 @@ function checkPower() {
 
     function and(input1, input2, out) {
       if (input1 & input2) {
-        document.querySelectorAll(".and")[out].style.backgroundColor = "#7FFF00";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
-        document.querySelectorAll(".and")[out].style.backgroundColor = "#FF0000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
       return out;
     }
 
     function or(input1, input2, out) {
       if (input1 | input2) {
-        document.querySelectorAll(".or")[out].style.backgroundColor = "#7FFF00";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
-        document.querySelectorAll(".or")[out].style.backgroundColor = "#FF0000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
       return out;
     }
 
     function nand(input1, input2, out) {
       if (!(input1 & input2)) {
-        document.querySelectorAll(".nand")[out].style.backgroundColor = "#7FFF00";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
-        document.querySelectorAll(".nand")[out].style.backgroundColor = "#FF0000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
       return out;
     }
 
     function nor(input1, input2, out) {
       if (!(input1 | input2)) {
-        document.querySelectorAll(".nor")[out].style.backgroundColor = "#7FFF00";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
-        document.querySelectorAll(".nor")[out].style.backgroundColor = "#FF0000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
       return out;
     }
 
     function xor(input1, input2, out) {
       if (input1 ^ input2) {
-        document.querySelectorAll(".xor")[out].style.backgroundColor = "#7FFF00";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#7FFF00";
       } else {
-        document.querySelectorAll(".xor")[out].style.backgroundColor = "#FF0000";
+        document.querySelectorAll(".off")[out].style.backgroundColor = "#FF0000";
       }
       return out;
     }
@@ -104,31 +104,58 @@ function checkPower() {
       vccVal.push(checking(document.querySelector(vccs)));
     }
 
-    function operate(input1, input2, out) {
-      return and(input1, input2, out);
-    }
-    operation = ["and", "or", "nand", "nor", "xor"];
-
-
-
-      if ((vccVal[0] == 1) && (groundVal[0] == 1)) {
-        for (var q=0; q< 6; q += 2) {
-          for (var w=1; w< 4; w++) {
-            var e = w;
-
-          }
-          console.log(e);
-          console.log(q);
-        }
-      } else {
-        if ((andInputs.every(item => item == 0)) == false) {
-          alert("Turn on both the vcc and ground for  gate IC.")
-        }
+    if ((vccVal[0] == 1) && (groundVal[0] == 1)) {
+      and(andInputs[0], andInputs[1], 0);
+      and(andInputs[2], andInputs[3], 1);
+      and(andInputs[4], andInputs[5], 3);
+      and(andInputs[6], andInputs[7], 2);
+    } else {
+      if ((andInputs.every(item => item == 0)) == false) {
+        alert("Turn on both the vcc and ground for AND gate IC.")
       }
+    }
 
-    setTimeout(function() {
-      alert("Power is turned on. Restart the power button after any changes.");
-    }, 1000);
+    if ((vccVal[1] == 1) && (groundVal[1] == 1)) {
+      or(orInputs[0], orInputs[1], 4);
+      or(orInputs[2], orInputs[3], 5);
+      or(orInputs[4], orInputs[5], 7);
+      or(orInputs[6], orInputs[7], 6);
+    } else {
+      if ((orInputs.every(item => item == 0)) == false) {
+        alert("Turn on both the vcc and ground for OR gate IC.")
+      }
+    }
+    if ((vccVal[2] == 1) && (groundVal[2] == 1)) {
+      nand(nandInputs[0], nandInputs[1], 8);
+      nand(nandInputs[2], nandInputs[3], 9);
+      nand(nandInputs[4], nandInputs[5], 11);
+      nand(nandInputs[6], nandInputs[7], 10);
+    } else {
+      if ((nandInputs.every(item => item == 0)) == false) {
+        alert("Turn on both the vcc and ground for NAND gate IC.")
+      }
+    }
+    if ((vccVal[3] == 1) && (groundVal[3] == 1)) {
+      nor(norInputs[0], norInputs[1], 12);
+      nor(norInputs[2], norInputs[3], 13);
+      nor(norInputs[4], norInputs[5], 15);
+      nor(norInputs[6], norInputs[7], 14);
+    } else {
+      if ((norInputs.every(item => item == 0)) == false) {
+        alert("Turn on both the vcc and ground for NOR gate IC.")
+      }
+    }
+    if ((vccVal[4] == 1) && (groundVal[4] == 1)) {
+      xor(xorInputs[0], xorInputs[1], 16);
+      xor(xorInputs[2], xorInputs[3], 17);
+      xor(xorInputs[4], xorInputs[5], 19);
+      xor(xorInputs[6], xorInputs[7], 18);
+    } else {
+      if ((xorInputs.every(item => item == 0)) == false) {
+        alert("Turn on both the vcc and ground for XOR gate IC.")
+      }
+    }
+    setTimeout(function(){ alert("Power is turned on. Restart the power button after any changes."); }, 1000);
   } else {
     var numButtons = document.querySelectorAll(".off").length;
     for (var i = 0; i < numButtons; i++) {
