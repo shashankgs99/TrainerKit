@@ -1,3 +1,15 @@
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
 var power = document.querySelector("#accept");
 power.addEventListener('change', checkPower);
 
@@ -48,8 +60,8 @@ function checkPower() {
      document.querySelector("#muxe").addEventListener('change', checking);
      muxSE.push(checking(document.querySelector("#muxe")));
 
-     console.log(muxInputs);
-     console.log(muxSE);
+     console.log("MUX INPUTS: ",muxInputs);
+     console.log("MUX SELECT AND ENABLE: ",muxSE);
 
      var demuxInputs = [];
      for (var j = 1; j < 7; j++) {
@@ -57,6 +69,8 @@ function checkPower() {
        document.querySelector(demuxIn).addEventListener('change', checking);
        demuxInputs.push(checking(document.querySelector(demuxIn)));
      }
+
+     console.log("DEMUX INPUTS: ",demuxInputs);
 //     console.log(demuxInputs);
 
 /*     var adderAInputs = [];
