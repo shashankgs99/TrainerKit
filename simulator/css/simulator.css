@@ -6,6 +6,59 @@ body {
     padding-bottom: 0;
 }
 
+/* Secondary nav-bar */
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 180px; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#second-nav {
+  transition: margin-left .5s;
+  text-align: left;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* Closed */
 
 .start-header {
 	opacity: 1;
@@ -182,7 +235,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     /* color: #fff; */
-    
+
 }
 
 #ic_heading_text{
@@ -194,7 +247,7 @@ body {
     margin-top: 50px;
 }
 
-.row_main_title{ 
+.row_main_title{
     align-items: center;
     justify-content: center;
     margin-top: 30px;
@@ -222,7 +275,7 @@ h1{
 
 
 table, th, td {
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -313,12 +366,12 @@ table, th, td {
     margin: 10px 2px 5px 4px;
     border: 1.5px;
   }
-  
+
   .after {
     margin-top: 350px;
     padding-left: 2%;
   }
-  
+
   .btn-circle.btn-sm {
     width: 20px;
     height: 20px;
@@ -327,7 +380,7 @@ table, th, td {
     font-size: 8px;
     text-align: center;
   }
-  
+
   .red {
     color: #FF0000;
     font-weight: bold;
@@ -349,57 +402,57 @@ table, th, td {
     font-style: italic;
   }
 
-  
+
   h2 , h4, ul {
     margin: 10px;
   }
-  
+
   h4 {
     font-size: 1.2rem;
   }
-  
+
   input {
     width: 47px;
   }
-  
+
   h3 {
     padding-left: 50px;
   }
-  
+
   #and {
     position: absolute;
     top: 100px;
     width: 325px;
   }
-  
+
   #or {
     position: absolute;
     top: 100px;
     left: 330px;
     width: 325px;
   }
-  
+
   #nand {
     position: absolute;
     top: 100px;
     left: 625px;
     width: 325px;
   }
-  
+
   #nor {
     position: absolute;
     top: 100px;
     left: 920px;
     width: 325px;
   }
-  
+
   #xor {
     position: absolute;
     top: 100px;
     left: 1210px;
     width: 325px;
   }
-  
+
   /* The switch - the box around the slider */
   .switch {
     position: relative;
@@ -407,14 +460,14 @@ table, th, td {
     height: 20px;
     display: inline-block;
   }
-  
+
   /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
-  
+
   /* The slider */
   .slider {
     position: absolute;
@@ -427,7 +480,7 @@ table, th, td {
     -webkit-transition: .2s;
     transition: .2s;
   }
-  
+
   .slider:before {
     position: absolute;
     content: "";
@@ -439,40 +492,38 @@ table, th, td {
     -webkit-transition: .2s;
     transition: .2s;
   }
-  
+
   input:checked + .slider {
     background-color: #2196F3;
   }
-  
+
   input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
   }
-  
+
   input:checked + #vcc {
     background-color: red;
   }
-  
+
   input:checked + #ground {
     background-color: black;
   }
-  
+
   input:focus + .slider {
     box-shadow: 0 0 1px red;
   }
-  
+
   input:checked + .slider:before {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
     transform: translateX(10px);
   }
-  
+
   /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
-  
+
   .slider.round:before {
     border-radius: 50%;
   }
-  
-  
