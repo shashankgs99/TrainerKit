@@ -60,8 +60,8 @@ function checkPower() {
      document.querySelector("#muxe").addEventListener('change', checking);
      muxSE.push(checking(document.querySelector("#muxe")));
 
-     console.log(muxInputs);
-     console.log(muxSE);
+     console.log("MUX INPUTS: ",muxInputs);
+     console.log("MUX SELECT AND ENABLE: ",muxSE);
 
      var demuxInputs = [];
      for (var j = 1; j < 7; j++) {
@@ -69,6 +69,8 @@ function checkPower() {
        document.querySelector(demuxIn).addEventListener('change', checking);
        demuxInputs.push(checking(document.querySelector(demuxIn)));
      }
+
+     console.log("DEMUX INPUTS: ",demuxInputs);
 //     console.log(demuxInputs);
 
 /*     var adderAInputs = [];
