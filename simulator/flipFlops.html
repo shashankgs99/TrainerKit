@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="col row_main_title_2">
-                        <h1>2-input quad MUX IC</h1>
+                        <h1>D Flip Flop</h1>
                     </div>
 
                 </div>
@@ -291,9 +291,17 @@
                                         <td></td>
                                       </tr>
                                       <tr>
+                                          <td>
+                                              <label class="switch">
+                                                  <input id="clock3" type="checkbox">
+                                                  <span class="slider round"></span>
+                                              </label>
+                                          </td>
+                                      </tr>
+                                      <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="muxs" type="checkbox">
+                                            <input id="d1" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -301,62 +309,40 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux1" type="checkbox">
+                                            <input id="clear3" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
                                       <tr>
+                                          <td>
+                                              <label class="switch">
+                                                  <input id="preset1" type="checkbox">
+                                                  <span class="slider round"></span>
+                                              </label>
+                                          </td>
+                                      </tr>
+                                      <tr>
                                         <td>
-                                          <label class="switch">
-                                            <input id="mux2" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
+                                          <button class="off d-ff out1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <button class="off mux muxout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="mux3" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="mux4" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off mux muxout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          <button class="off d-ff out1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input class="groundMux" type="checkbox">
+                                            <input class="groundD" type="checkbox">
                                             <span id="ground" class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
-                                      <tr>
-                                        <td>
-
-                                        </td>
-                                      </tr>
                                     </table>
                                   </td>
-                                  <td><img src="images/74LS157.jpg" alt="OR IC" height="300px"></td>
+                                  <td><img src="images/74LS139.jpg" alt="D Flip Flop" height="300px"></td>
                                   <td>
                                     <table>
                                       <tr>
@@ -389,7 +375,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input class="vccMux" type="checkbox">
+                                            <input class="vccD" type="checkbox">
                                             <span id="vcc" class="slider round"></span>
                                           </label>
                                         </td>
@@ -397,7 +383,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="muxe" class="muxe" type="checkbox">
+                                            <input id="clear4" class="muxe" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -405,7 +391,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux8" type="checkbox">
+                                            <input id="d2" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -413,20 +399,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux7" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off mux muxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="mux6" type="checkbox">
+                                            <input id="clock4" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -434,14 +407,19 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux5" type="checkbox">
+                                            <input id="preset2" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <button class="off mux muxout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          <button class="off d-ff out3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off d-ff out4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
                                         </td>
                                       </tr>
                                     </table>

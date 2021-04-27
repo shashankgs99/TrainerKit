@@ -66,18 +66,48 @@ function jk(clk, clr, j, k, out1, out2) {
     }
   }
 
+  function d_ff (pre, clr, clk, d, out1, out2) {
+    if ((pre == 0) && (clr == 1)) {
+      document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
+      document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#FF0000";
+    }
+    if ((pre == 1) && (clr == 0)) {
+      document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#7FFF00";
+      document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#FF0000";
+    }
+    if ((pre == 0) && (clr == 0)) {
+      document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
+      document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#7FFF00";
+    }
+    if ((pre == 0) && (clr == 1) && (clk == 1) && (d == 1)) {
+      document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
+      document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#FF0000";
+    }
+    if ((pre == 0) && (clr == 1) && (clk == 1) && (d == 0)) {
+      document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#7FFF00";
+      document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#FF0000";
+    }
+  }
+
      var clocks = [];
-     for (var j =1; j<3; j++) {
+     for (var j =1; j<5; j++) {
        var clock = "#clock" + j;
        document.querySelector(clock).addEventListener('change', checking);
        clocks.push(checking(document.querySelector(clock)));
      }
 
      var clears = [];
-     for (var j =1; j<3; j++) {
+     for (var j =1; j<5; j++) {
        var clear = "#clear" + j;
        document.querySelector(clear).addEventListener('change', checking);
        clears.push(checking(document.querySelector(clear)));
+     }
+
+     var presets = [];
+     for (var j =1; j<3; j++) {
+       var preset = "#preset" + j;
+       document.querySelector(preset).addEventListener('change', checking);
+       presets.push(checking(document.querySelector(preset)));
      }
 
      var jInputs = [];
@@ -94,13 +124,20 @@ function jk(clk, clr, j, k, out1, out2) {
        kInputs.push(checking(document.querySelector(kIn)));
      }
 
+     var dInputs = [];
+     for (var j =1; j<3; j++) {
+       var dIn = "#d" + j;
+       document.querySelector(dIn).addEventListener('change', checking);
+       dInputs.push(checking(document.querySelector(dIn)));
+     }
+
      var jkInputs = clocks.concat(clears, jInputs, kInputs);
      console.log(jkInputs);
 
-     var main = ["JK"];
+     var main = ["JK","D"];
      var vccVal = [];
      var groundVal = [];
-     for (var k = 0; k < 1; k++) {
+     for (var k = 0; k < 2; k++) {
        var grounds = ".ground" + main[k];
        var vccs = ".vcc" + main[k];
        groundVal.push(checking(document.querySelector(grounds)));
@@ -114,7 +151,19 @@ function jk(clk, clr, j, k, out1, out2) {
        jk(clocks[1], clears[1], jInputs[1], kInputs[1], 2, 3);
      }else {
        if ((jkInputs.every(item => item == 0)) == false) {
-         alert("Turn on both the vcc and ground for JK IC.")
+         alert("Turn on both the vcc and ground for JK Flip Flop.")
+       }
+     }
+
+     var dFFInputs = clocks.concat(clears, presets, dInputs);
+     console.log(clears, clocks, presets, dInputs);
+
+     if ((vccVal[1] == 1) && (groundVal[1] == 1)) {
+       d_ff(presets[0], clears[3], clocks[3], dInputs[0], 0, 1);
+       d_ff(presets[1], clears[4], clocks[4], dInputs[1], 2, 3);
+     }else {
+       if ((dFFInputs.every(item => item == 0)) == false) {
+         alert("Turn on both the vcc and ground for D Flip Flop.")
        }
      }
 
