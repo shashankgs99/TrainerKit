@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/simulator.css">
+        <title>VSIM - Simulator</title>
+    </head>
+
+
+    <body>
+        <div class="navigation-wrap bg-light start-header start-style">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-md navbar-light">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" style="margin-top: 3.5px; margin-right: 8px;" class="bi bi-cpu" viewBox="0 0 16 16"><path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg><a class="navbar-brand" href="../index.html">VSIM</a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link orderlink" href="../datasheets/index.html">DATASHEETS</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="../login/index.html">LOGIN</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ic_main_container">
+
+            <div class="ic_heading">
+                <h1 id="ic_heading_text">Virtual Digital IC Trainer Kit</h1>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="uniGates.html">Universal Gates</a>
+              <a href="index.html">Mux and Demux</a>
+              <a href="flipFlops.html">Flip Flops</a>
+              <a href="#">Contact</a>
+            </div>
+
+            <div id="second-nav">
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <b>IC's List</b></span>
+            </div>
+
+
+            <div class="ic_body">
+
+                <div class="row row_power_button">
+
+                    <div class="col power_button">
+                        POWER <br>
+                        <label class="switch">
+                            <input id="accept" type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="row row_main_title">
+
+                    <div class="col row_main_title_1">
+                        <h1>J-K Flip Flop</h1>
+                    </div>
+
+                    <div class="col row_main_title_2">
+                        <h1>2-input quad MUX IC</h1>
+                    </div>
+
+                </div>
+
+                <div class="row row_main_body">
+                    <div class="col row_main_body_1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="switch">
+                                                    <input id="clock1" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="clear1" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="k1" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input class="vccJK" type="checkbox">
+                                            <span id="vcc" class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="clock2" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="clear2" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="j2" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td class="centered"><img src="images/74LS139.jpg" alt="DEMUX IC" height="300px"></td>
+                                  <td>
+                                    <table>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="j1" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button onclick="stopColor()" class="off JK out3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off JK out3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input class="groundJK" type="checkbox">
+                                            <span id="ground" class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="k2" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off JK out3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off JK out4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                          </div>
+
+
+                          <div class="col row_main_body_2">
+                              <table>
+                                <tr>
+                                  <td>
+                                    <table>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="muxs" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux1" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux2" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off mux muxout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux3" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux4" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off mux muxout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input class="groundMux" type="checkbox">
+                                            <span id="ground" class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td><img src="images/74LS157.jpg" alt="OR IC" height="300px"></td>
+                                  <td>
+                                    <table>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input class="vccMux" type="checkbox">
+                                            <span id="vcc" class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="muxe" class="muxe" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux8" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux7" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off mux muxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux6" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="mux5" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off mux muxout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="js/flipflops.js" charset="utf-8"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
