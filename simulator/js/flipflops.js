@@ -66,7 +66,7 @@ function jk(clk, clr, j, k, out1, out2) {
     }
   }
 
-  function d_ff (pre, clr, clk, d, out1, out2) {
+  function d_ff(pre, clr, clk, d, out1, out2) {
     if ((pre == 0) && (clr == 1)) {
       document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
       document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#FF0000";
@@ -79,11 +79,11 @@ function jk(clk, clr, j, k, out1, out2) {
       document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
       document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#7FFF00";
     }
-    if ((pre == 0) && (clr == 1) && (clk == 1) && (d == 1)) {
+    if ((pre == 1) && (clr == 1) && (clk == 1) && (d == 1)) {
       document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#7FFF00";
       document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#FF0000";
     }
-    if ((pre == 0) && (clr == 1) && (clk == 1) && (d == 0)) {
+    if ((pre == 1) && (clr == 1) && (clk == 1) && (d == 0)) {
       document.querySelectorAll(".d-ff")[out2].style.backgroundColor = "#7FFF00";
       document.querySelectorAll(".d-ff")[out1].style.backgroundColor = "#FF0000";
     }
@@ -132,7 +132,6 @@ function jk(clk, clr, j, k, out1, out2) {
      }
 
      var jkInputs = clocks.concat(clears, jInputs, kInputs);
-     console.log(jkInputs);
 
      var main = ["JK","D"];
      var vccVal = [];
@@ -143,8 +142,6 @@ function jk(clk, clr, j, k, out1, out2) {
        groundVal.push(checking(document.querySelector(grounds)));
        vccVal.push(checking(document.querySelector(vccs)));
      }
-
-     console.log(vccVal, groundVal);
 
      if ((vccVal[0] == 1) && (groundVal[0] == 1)) {
        jk(clocks[0], clears[0], jInputs[0], kInputs[0], 1, 0);
@@ -159,8 +156,8 @@ function jk(clk, clr, j, k, out1, out2) {
      console.log(clears, clocks, presets, dInputs);
 
      if ((vccVal[1] == 1) && (groundVal[1] == 1)) {
-       d_ff(presets[0], clears[3], clocks[3], dInputs[0], 0, 1);
-       d_ff(presets[1], clears[4], clocks[4], dInputs[1], 2, 3);
+       d_ff(presets[0], clears[2], clocks[2], dInputs[0], 0, 1);
+       d_ff(presets[1], clears[3], clocks[3], dInputs[1], 2, 3);
      }else {
        if ((dFFInputs.every(item => item == 0)) == false) {
          alert("Turn on both the vcc and ground for D Flip Flop.")
