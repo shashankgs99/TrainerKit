@@ -19,7 +19,7 @@
 
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" style="margin-top: 3.5px; margin-right: 8px;" class="bi bi-cpu" viewBox="0 0 16 16"><path d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0zm-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3h-7zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/></svg><a class="navbar-brand" href="../index.html">VSIM</a>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="off navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
 
@@ -48,10 +48,10 @@
 
             <div id="mySidenav" class="sidenav">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-              <a href="uniGates.html">Universal Gates</a>
-              <a href="index.html">Mux and Demux</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+              <a href="index.html">Universal Gates</a>
+              <a href="muxs.html">Mux and Demux</a>
+              <a href="adder.html">Adders</a>
+              <a href="flipFlops.html">Flip Flop</a>
             </div>
 
             <div id="second-nav">
@@ -77,11 +77,15 @@
                 <div class="row row_main_title">
 
                     <div class="col row_main_title_1">
-                        <h1>DEMUX 74LS139</h1>
+                        <h1>2-input quad AND gate IC</h1>
                     </div>
 
                     <div class="col row_main_title_2">
-                        <h1>2-input quad MUX IC</h1>
+                        <h1>2-input quad OR gate IC</h1>
+                    </div>
+
+                    <div class="col row_main_title_3">
+                        <h1>2-input quad NAND gate IC</h1>
                     </div>
 
                 </div>
@@ -120,144 +124,144 @@
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label class="switch">
-                                                    <input id="demux1" type="checkbox">
-                                                    <span class="slider round"></span>
-                                                </label>
-                                            </td>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and1" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label class="switch">
-                                                    <input id="demux2" type="checkbox">
-                                                    <span class="slider round"></span>
-                                                </label>
-                                            </td>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and2" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
                                         </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="demux3" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input class="groundDemux" type="checkbox">
-                                            <span id="ground" class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                  <td class="centered"><img src="images/74LS139.jpg" alt="DEMUX IC" height="300px"></td>
-                                  <td>
-                                    <table>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input class="vccDemux" type="checkbox">
-                                            <span id="vcc" class="slider round"></span>
-                                          </label>
-                                      </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="demux4" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="demux5" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="demux6" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off demux demuxout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off and andOut1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and3" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and4" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off and andout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input class="groundAnd" type="checkbox">
+                                              <span id="ground" class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                    <td><img src="images/74LS08.jpg" alt="AND IC" height="300px"></td>
+                                    <td>
+                                      <table>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input class="vccAnd" type="checkbox">
+                                              <span id="vcc" class="slider round"></span>
+                                            </label>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and8" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and7" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off and andout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and6" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="and5" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off and andout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
                               </table>
                           </div>
 
@@ -297,7 +301,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="muxs" type="checkbox">
+                                            <input id="or1" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -305,29 +309,21 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux1" type="checkbox">
+                                            <input id="or2" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <label class="switch">
-                                            <input id="mux2" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off mux muxout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          <button class="off or orout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
 
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux3" type="checkbox">
+                                            <input id="or3" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -335,20 +331,20 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux4" type="checkbox">
+                                            <input id="or4" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <button class="off mux muxout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          <button class="off or orout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input class="groundMux" type="checkbox">
+                                            <input class="groundOr" type="checkbox">
                                             <span id="ground" class="slider round"></span>
                                           </label>
                                         </td>
@@ -360,7 +356,7 @@
                                       </tr>
                                     </table>
                                   </td>
-                                  <td><img src="images/74LS157.jpg" alt="OR IC" height="300px"></td>
+                                  <td><img src="images/74LS32.jpg" alt="OR IC" height="300px"></td>
                                   <td>
                                     <table>
                                       <tr>
@@ -391,9 +387,12 @@
                                         <td></td>
                                       </tr>
                                       <tr>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
                                         <td>
                                           <label class="switch">
-                                            <input class="vccMux" type="checkbox">
+                                            <input class="vccOr" type="checkbox">
                                             <span id="vcc" class="slider round"></span>
                                           </label>
                                         </td>
@@ -401,7 +400,7 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="muxe" class="muxe" type="checkbox">
+                                            <input id="or8" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -409,7 +408,20 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux8" type="checkbox">
+                                            <input id="or7" type="checkbox">
+                                            <span class="slider round"></span>
+                                          </label>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <button class="off or orout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <label class="switch">
+                                            <input id="or6" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
@@ -417,35 +429,14 @@
                                       <tr>
                                         <td>
                                           <label class="switch">
-                                            <input id="mux7" type="checkbox">
+                                            <input id="or5" type="checkbox">
                                             <span class="slider round"></span>
                                           </label>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <button class="off mux muxout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="mux6" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <label class="switch">
-                                            <input id="mux5" type="checkbox">
-                                            <span class="slider round"></span>
-                                          </label>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <button class="off mux muxout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          <button class="off or orout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
                                         </td>
                                       </tr>
                                     </table>
@@ -453,7 +444,552 @@
                                 </tr>
                               </table>
                         </div>
-                    </div>
+
+                    <div class="col row_main_body_3">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand1" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand2" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off nand nandout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand3" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand4" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off nand nandout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input class="groundNand" type="checkbox">
+                                              <span id="ground" class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                    <td><img src="images/74LS00.jpg" alt="NAND IC" height="250px"></td>
+                                    <td>
+                                      <table>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td></td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input class="vccNand" type="checkbox">
+                                              <span id="vcc" class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand8" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand7" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off nand nandout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand6" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <label class="switch">
+                                              <input id="nand5" type="checkbox">
+                                              <span class="slider round"></span>
+                                            </label>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>
+                                            <button class="off nand nandout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                              </table>
+                          </div>
+                        </div>
+
+                        <div class="row row_main_title">
+
+                        <div class="col row_main_title_1">
+                            <h1>2-input quad NOR gate IC</h1>
+                        </div>
+
+                        <div class="col row_main_title_2">
+                            <h1>2-input quad XOR gate IC</h1>
+                        </div>
+
+                      </div>
+
+                      <div class="row row_main_body">
+                          <div class="col row_main_body_1">
+                              <table>
+                                  <tr>
+                                      <td>
+                                          <table>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                  <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off nor norout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor1" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor2" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off nor norout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor3" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor4" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input  class="groundNor" type="checkbox">
+                                                    <span id="ground" class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                          <td><img src="images/74LS02.jpg" alt="NOR IC" height="250px"></td>
+                                          <td>
+                                            <table>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td></td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input class="vccNor" type="checkbox">
+                                                    <span id="vcc" class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off nor norout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor8" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor7" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off nor norout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor6" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="nor5" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="col row_main_body_2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="switch">
+                                                          <input id="xor1" type="checkbox">
+                                                          <span class="slider round"></span>
+                                                        </label>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="switch">
+                                                          <input id="xor2" type="checkbox">
+                                                          <span class="slider round"></span>
+                                                        </label>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <button class="off xor xorout1" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="switch">
+                                                          <input id="xor3" type="checkbox">
+                                                          <span class="slider round"></span>
+                                                        </label>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="switch">
+                                                          <input id="xor4" type="checkbox">
+                                                          <span class="slider round"></span>
+                                                        </label>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td><button class="off xor xorout2" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                        <label class="switch">
+                                                          <input  class="groundXor" type="checkbox">
+                                                          <span id="ground" class="slider round"></span>
+                                                        </label>
+                                                      </td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                </td>
+                                                <td><img src="images/74LS86.jpg" alt="XOR IC" height="250px"></td>
+                                                <td>
+                                                  <table>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td></td>
+                                                    </tr>
+                                                    <td>
+                                                      <label class="switch">
+                                                        <input class="vccXor" type="checkbox">
+                                                        <span id="vcc" class="slider round"></span>
+                                                      </label>
+                                                    </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="xor8" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="xor7" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off xor xorout3" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="xor6" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <label class="switch">
+                                                    <input id="xor5" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                              <tr>
+                                                <td>
+                                                  <button class="off xor xorout4" type="button" class="btn btn-primary btn-circle btn-sm"></button>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                            </td>
+                                            </tr>
+                                          </table>
+                                      </div>
+
+                      </div>
 
             </div>
         </div>
@@ -464,7 +1000,7 @@
 
 
 
-        <script src="js/simulator.js" charset="utf-8"></script>
+        <script src="js/uniGates.js" charset="utf-8"></script>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
