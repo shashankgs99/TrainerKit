@@ -1,13 +1,11 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidenav").style.width = "100%";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
 }
 
 var power = document.querySelector("#accept");
@@ -71,9 +69,8 @@ function checkPower() {
      }
 
      console.log("DEMUX INPUTS: ",demuxInputs);
-//     console.log(demuxInputs);
 
-/*     var adderAInputs = [];
+     var adderAInputs = [];
      var adderBInputs = [];
      for (var j = 1; j < 5; j++) {
        var adderA = "#adderA" + j;
@@ -101,14 +98,16 @@ function checkPower() {
      } else {
        var z = 4;
      }
-     console.log(fullAdderS);
-     console.log(fullAdderA);
-     console.log(fullAdderB);
-*/
+
+     console.log("1st Number: " +adderAInputs);
+     console.log("2st Number: " +adderBInputs);
+     console.log("cIn Number: " +adderCi);
+     console.log("Out Number: " +fullAdderS.join(""));
+
      var main = ["Demux  ", "Mux", "Adder"];
      var vccVal = [];
      var groundVal = [];
-     for (var k = 0; k < 2; k++) {
+     for (var k = 0; k < 3; k++) {
        var grounds = ".ground" + main[k];
        var vccs = ".vcc" + main[k];
        groundVal.push(checking(document.querySelector(grounds)));
@@ -175,29 +174,29 @@ function checkPower() {
      }
    }
 
-//     function adder(input1, sum) {
-//       if (input1 == 1) {
-//         document.querySelectorAll(".adder")[sum].style.backgroundColor = "#7FFF00";
-//       } else {
-//         document.querySelectorAll(".adder")[sum].style.backgroundColor = "#FF0000";
-//       }
-//       if ((fullAdderS[0]) == 1) {
-//         document.querySelectorAll(".adderC")[0].style.backgroundColor = "#7FFF00";
-//       } else {
-//         document.querySelectorAll(".adderC")[0].style.backgroundColor = "#FF0000";
-//       }
-//     }
+    function adder(input1, sum) {
+       if (input1 == 1) {
+         document.querySelectorAll(".adder")[sum].style.backgroundColor = "#7FFF00";
+       } else {
+         document.querySelectorAll(".adder")[sum].style.backgroundColor = "#FF0000";
+       }
+       if ((fullAdderS[0]) == 1) {
+         document.querySelectorAll(".adderC")[0].style.backgroundColor = "#7FFF00";
+       } else {
+         document.querySelectorAll(".adderC")[0].style.backgroundColor = "#FF0000";
+       }
+     }
 
-//     if ((vccVal[2] == 1) && (groundVal[2] == 1)) {
-//       adder(fullAdderS[1],3);
-//       adder(fullAdderS[2],0);
-//       adder(fullAdderS[3],1);
-//       adder(fullAdderS[4],2);
-//     }else {
-//       if (((adderAInputs.every(item => item == 0)) && ((adderBInputs.every(item => item == 0)))) == false) {
-//         alert("Turn on both the vcc and ground for Full Adder IC.")
-//       }
-//     }
+     if ((vccVal[2] == 1) && (groundVal[2] == 1)) {
+       adder(fullAdderS[1],3);
+       adder(fullAdderS[2],0);
+       adder(fullAdderS[3],1);
+       adder(fullAdderS[4],2);
+     }else {
+       if (((adderAInputs.every(item => item == 0)) && ((adderBInputs.every(item => item == 0)))) == false) {
+         alert("Turn on both the vcc and ground for Full Adder IC.")
+       }
+     }
 
      setTimeout(function(){ alert("Power is turned on. Restart the power button after any changes."); }, 100);
    } else {
